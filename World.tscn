@@ -35,8 +35,8 @@ position = Vector2( 72.9678, 25.7678 )
 [node name="Pipe" parent="Objects" instance=ExtResource( 4 )]
 position = Vector2( 47.6784, 32.6938 )
 
+[node name="CodePaper" parent="Objects" instance=ExtResource( 8 )]
+position = Vector2( 77.0072, 88.8121 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 93.6545, 58.2361 )
-
-[node name="CodePaper" parent="." instance=ExtResource( 8 )]
-position = Vector2( 77.0072, 88.8121 )

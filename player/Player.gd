@@ -10,6 +10,8 @@ onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 onready var playerInteraction = $PlayerInteraction
 
+var interactables
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -17,10 +19,10 @@ func _ready():
 func _physics_process(delta):
 	move(delta)
 	
-	var test = playerInteraction.get_overlapping_areas()
-	if Input.is_action_just_pressed("interact") && !test.empty():
-		print(test[0].pickup_name)
-		test[0].pickup()
+	interactables = playerInteraction.get_overlapping_areas()
+	if Input.is_action_just_pressed("interact") && !interactables.empty():
+		print(interactables[0].pickup_name)
+		interactables[0].pickup()
 
 func move(delta):
 	var input_vector = Vector2.ZERO
